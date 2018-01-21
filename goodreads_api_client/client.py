@@ -17,7 +17,7 @@ class Client(object):
             generate one here <https://goodreads.com/api/keys>
         :param str developer_secret: Your Goodreads developer secret
         :param str/None base_url: Base URL of the Goodreads API.
-            Defaults to https://goodreads.com.
+            Defaults to https://www.goodreads.com.
         """
         self._transport = Transport(developer_key, developer_secret, base_url)
 

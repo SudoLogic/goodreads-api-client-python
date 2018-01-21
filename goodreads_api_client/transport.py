@@ -36,10 +36,10 @@ class Transport(object):
             generate one here <https://goodreads.com/api/keys>
         :param str developer_secret: Your Goodreads developer secret
         :param str/None base_url: Base URL of the Goodreads API.
-            Defaults to https://goodreads.com.
+            Defaults to https://www.goodreads.com.
         """
         if base_url is None:
-            self.base_url = 'http://www.goodreads.com'
+            self.base_url = 'https://www.goodreads.com'
         else:
             self.base_url = base_url
 
