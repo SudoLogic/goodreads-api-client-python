@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """Module containing client with resources of Goodreads API."""
 
-from goodreads_api_client.exceptions import OauthEndpointNotImplemented
 import goodreads_api_client.resources as resources
 from goodreads_api_client.transport import Transport
 
