@@ -36,7 +36,12 @@ class Client(object):
         self._transport.authorize()
 
     def auth_user(self):
-        raise OauthEndpointNotImplemented('auth.user')
+        """
+        :return: id of authenticated user
+        """
+        endpoint = 'api/auth_user'
+        res = self._transport.req(endpoint=endpoint, uses_oauth=True)
+        return res['user']['@id']
 
     def search_author(self, name: str):
         endpoint = 'api/author_url/{}'.format(name)
