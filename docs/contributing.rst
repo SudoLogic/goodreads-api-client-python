@@ -17,9 +17,14 @@ This library uses `VCR <https://github.com/kevin1024/vcrpy>`_ for recording Good
 #. a `Goodreads developer key <https://www.goodreads.com/api/keys>`_
 #. to put your keys into `GOODREADS_API_KEY` and `GOODREADS_API_SECRET` environment variables, using something like `direnv <https://direnv.net/>`_
 #. to blow away old cassettes (if necessary)
-#. to uncomment the test patch blocking triggering the Oauth setup flow in
-    :file:`<goodreads_api_client/tests/resources/conftest.py>`
 #. to re-run `make test` to re-record cassettes
+
+For Oauth tests, you also want to
+
+#. Run `client.authorize()` locally (e.g. from a Python REPL) to generate a `client.json` file
+#. to uncomment the test patch blocking triggering the Oauth setup flow in :file:`<goodreads_api_client/tests/resources/conftest.py>`, specifically the `patch_transport.start()` line
+# to re-run `make test` to re-record cassettes
+
 
 And that should be it.
 
